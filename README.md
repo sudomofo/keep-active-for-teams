@@ -23,7 +23,8 @@ keep-active-for-teams/
 ├── marketing/          # Store assets (promo tile, screenshot template)
 ├── Makefile            # `make zip` to build the upload artefact
 ├── STORE_LISTING.md    # Chrome Web Store listing copy
-└── EDGE_LISTING.md     # Microsoft Edge Add-ons listing copy
+├── EDGE_LISTING.md     # Microsoft Edge Add-ons listing copy
+└── LICENSE             # MIT
 ```
 
 ## Install (developer mode)
@@ -39,13 +40,15 @@ keep-active-for-teams/
 
 Same as Chrome but at `edge://extensions`.
 
-## Build the upload artefact
+## Build & submit
 
 ```sh
-make zip
+make zip      # build dist/keep-active-for-teams-v<version>.zip (runtime files only)
+make check    # verify every required asset is present and the privacy URL is live
+make submit   # print a step-by-step Chrome + Edge submission checklist
 ```
 
-Produces `dist/keep-active-for-teams-v<version>.zip` containing only the runtime files (manifest, JS, HTML, icons) — no markdown, no docs, no marketing. Upload that zip to the Chrome Web Store or Edge Add-ons Partner Center.
+`make zip` excludes markdown, docs, marketing tiles, and the Makefile itself — only the manifest, JS, HTML, and icons go into the artefact uploaded to the Chrome Web Store and Edge Add-ons Partner Center.
 
 ## How it works
 
@@ -73,4 +76,4 @@ If this saved you from one too many "Away" pings, you can [buy me a coffee ☕](
 
 ## License
 
-MIT — see [LICENSE](LICENSE) if present, otherwise treat as MIT.
+[MIT](LICENSE) © 2026 Syed Abu Bakar Syed Hussin
