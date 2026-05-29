@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Keep Active for Teams</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --fg: #1f1f1f;
+        --muted: #5f5f5f;
+        --accent: #6264a7;
+        --accent-on: #1f8a4c;
+        --border: #e2e2e2;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1f1f1f;
+          --fg: #f1f1f1;
+          --muted: #b4b4b4;
+          --border: #3a3a3a;
+        }
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        font-size: 14px;
+        min-width: 260px;
+      }
+      .wrap {
+        padding: 14px 16px;
+      }
+      h1 {
+        margin: 0 0 4px 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+      .sub {
+        color: var(--muted);
+        margin-bottom: 14px;
+        font-size: 12px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+      }
+      .label {
+        display: flex;
+        flex-direction: column;
+      }
+      .label .state {
+        font-weight: 600;
+      }
+      .label .hint {
+        font-size: 11px;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+        flex-shrink: 0;
+      }
+      .switch input { opacity: 0; width: 0; height: 0; }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        inset: 0;
+        background-color: #b4b4b4;
+        border-radius: 999px;
+        transition: background-color 0.15s ease;
+      }
+      .slider::before {
+        content: "";
+        position: absolute;
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        top: 3px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.15s ease;
+      }
+      input:checked + .slider {
+        background-color: var(--accent-on);
+      }
+      input:checked + .slider::before {
+        transform: translateX(20px);
+      }
+      .status {
+        margin-top: 12px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .status.warn {
+        color: #b35900;
+      }
+
+      .footer {
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        justify-content: center;
+      }
+      .bmc {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 12px;
+        background: #ffdd00;
+        color: #1f1f1f;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 600;
+        transition: filter 0.15s ease;
+      }
+      .bmc:hover { filter: brightness(0.95); }
+      .bmc .emoji { font-size: 14px; line-height: 1; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>Keep Active for Teams</h1>
+      <div class="sub">Simulates activity so your Teams status stays available.</div>
+
+      <label class="row" for="toggle">
+        <span class="label">
+          <span class="state" id="stateLabel">Off</span>
+          <span class="hint">Pulses every 4 minutes on Teams tabs.</span>
+        </span>
+        <span class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+        </span>
+      </label>
+
+      <div class="status" id="status"></div>
+
+      <div class="footer">
+        <a
+          id="bmc"
+          class="bmc"
+          href="https://buymeacoffee.com/sudomofo"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Support the developer"
+        >
+          <span class="emoji">☕</span>
+          <span>Buy me a coffee</span>
+        </a>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

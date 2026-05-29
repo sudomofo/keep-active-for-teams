@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build / dist
+dist/
+*.zip
+
+# Logs
+*.log
+npm-debug.log*
