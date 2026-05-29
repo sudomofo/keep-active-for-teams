@@ -144,12 +144,13 @@ Paste that URL into the "Privacy policy" field of the Developer Dashboard.
 
 ## Required image assets
 
-| Asset | Size | Where to use |
-|---|---|---|
-| Icon | 128×128 PNG | already in `icons/icon128.png` |
-| Screenshots (1–5) | 1280×800 or 640×400 PNG/JPG | at minimum: (1) popup open over a Teams tab, (2) Teams tab with toolbar badge showing "ON" |
-| Small promo tile | 440×280 PNG | required, for the store grid |
-| Marquee promo tile | 1400×560 PNG | optional, only if you want to be considered for featuring |
+| Asset | Size | Status | Path |
+|---|---|---|---|
+| Icon | 128×128 PNG | ✅ ready | [`icons/icon128.png`](icons/icon128.png) |
+| Small promo tile | 440×280 PNG | ✅ ready | [`marketing/promo-tile-440x280.png`](marketing/promo-tile-440x280.png) |
+| Screenshot (template) | 1280×800 PNG | ✅ template ready | [`marketing/screenshot-1280x800.png`](marketing/screenshot-1280x800.png) |
+| Additional screenshots (optional) | 1280×800 or 640×400 | replace template with real screen captures of the popup over Teams | — |
+| Marquee promo tile | 1400×560 PNG | optional, only if you want to be considered for featuring | — |
 
 **Trademark safety for images:** crop screenshots so the Microsoft / Teams logo is not the primary focus, and don't use Microsoft branding in your promo tiles. Your own purple-square-with-T icon is fine.
 
