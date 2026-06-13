@@ -67,6 +67,7 @@ check:
 	echo ""; \
 	echo "Store assets:"; \
 	check_file "marketing/promo-tile-440x280.png"; \
+	check_file "marketing/marquee-promo-tile-1400x560.png"; \
 	check_file "marketing/screenshot-1280x800.png"; \
 	check_file "marketing/screenshot-1366x768.png"; \
 	check_file "marketing/edge-store-logo-300x300.png"; \

@@ -66,9 +66,9 @@ No data leaves your browser. The extension stores a single boolean (your On/Off 
 - If you reload Teams, the content script re-reads the persisted state and resumes automatically.
 - Operates only on `teams.microsoft.com` and `teams.live.com`.
 
-## Support the project
+## Tip jar
 
-If this saved you from one too many "Away" pings, you can [buy me a coffee ☕](https://buymeacoffee.com/sudomofo).
+If this saved you from one too many "Away" pings, you can [buy me a coffee ☕](https://buymeacoffee.com/sudomofo) — tips keep small side-projects like this going.
 
 <a href="https://buymeacoffee.com/sudomofo" target="_blank">
   <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50" />

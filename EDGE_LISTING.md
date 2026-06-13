@@ -93,8 +93,8 @@ This extension does not collect personal information, does not transmit any data
 NOT AFFILIATED WITH MICROSOFT
 This is an independent project and is not affiliated with, endorsed by, or sponsored by Microsoft Corporation. "Microsoft Teams" is a trademark of Microsoft Corporation.
 
-SUPPORT
-If this saved you from one too many "Away" pings, you can buy me a coffee at https://buymeacoffee.com/sudomofo. The link is also in the popup.
+TIP JAR
+If this saved you from one too many "Away" pings, you can buy me a coffee at https://buymeacoffee.com/sudomofo. Tips are optional and the link is also in the popup.
 
 Source code: https://github.com/sudomofo/keep-active-for-teams
 ```
