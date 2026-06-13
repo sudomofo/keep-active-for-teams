@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Keep Active for Teams",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Prevents your Microsoft Teams web status from going idle. Toggle the activity simulator on or off from the popup.",
   "permissions": ["storage", "tabs"],
   "host_permissions": [
