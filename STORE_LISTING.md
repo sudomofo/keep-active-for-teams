@@ -29,7 +29,7 @@ Keep Active for Teams stops your Microsoft Teams web status from flipping to "Aw
 
 FEATURES
 • One-click On/Off toggle in the popup
-• Works on teams.microsoft.com and teams.live.com
+• Works on teams.microsoft.com, teams.live.com, and teams.cloud.microsoft
 • "ON" badge on the toolbar icon while active
 • Setting persists across browser restarts
 • Pauses immediately when toggled off — no reload needed
@@ -44,7 +44,7 @@ HOW TO USE
 PERMISSIONS, IN PLAIN ENGLISH
 • Storage — remembers your On/Off setting.
 • Tabs — lets the popup tell you whether a Teams tab is currently open.
-• Host access to teams.microsoft.com / teams.live.com — the activity simulator runs only on those pages, nowhere else.
+• Host access to teams.microsoft.com / teams.live.com / teams.cloud.microsoft — the activity simulator runs only on those pages, nowhere else.
 
 PRIVACY
 This extension does not collect personal information, does not transmit any data over the network, and does not use analytics or remote code. The only thing it stores is a single boolean (your On/Off toggle) in your browser's local extension storage.
@@ -94,7 +94,7 @@ Used to persist the user's On/Off toggle so the setting survives browser restart
 Used in the popup only, to check whether the user currently has a Microsoft Teams tab open. This lets the popup show "Active on N Teams tabs" or a hint to open Teams. No tab content, URLs of other sites, or browsing history is read or stored.
 ```
 
-**Host permissions — `https://teams.microsoft.com/*`, `https://teams.live.com/*`**
+**Host permissions — `https://teams.microsoft.com/*`, `https://teams.live.com/*`, `https://teams.cloud.microsoft/*`**
 ```
 The activity-simulator content script must run on the user's Microsoft Teams tab to dispatch mousemove and keydown events that prevent the idle timer from firing. These are the only sites the extension injects into.
 ```

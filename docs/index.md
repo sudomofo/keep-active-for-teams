@@ -37,7 +37,7 @@ We do not collect or process:
 |---|---|
 | `storage` | To remember your On/Off toggle across browser restarts. Stored locally only. |
 | `tabs` | So the popup can tell you whether you currently have a Microsoft Teams tab open. We read the count of matching tabs only — never page content, never other URLs. |
-| Host access to `https://teams.microsoft.com/*` and `https://teams.live.com/*` | The activity-simulator content script must run on the Teams tab to dispatch `mousemove` and `keydown` events. It runs on no other site. |
+| Host access to `https://teams.microsoft.com/*`, `https://teams.live.com/*`, and `https://teams.cloud.microsoft/*` | The activity-simulator content script must run on the Teams tab to dispatch `mousemove` and `keydown` events. It runs on no other site. |
 
 ## Third parties
 

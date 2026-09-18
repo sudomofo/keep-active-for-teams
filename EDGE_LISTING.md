@@ -44,7 +44,7 @@ storage: Persists the user's On/Off toggle across browser restarts via chrome.st
 
 tabs: Used only inside the popup to count open Microsoft Teams tabs so the popup can show "Active on N Teams tabs" or prompt the user to open one. No tab URLs from other sites are read or stored.
 
-Host permissions (teams.microsoft.com, teams.live.com): The activity-simulator content script runs only on these pages to dispatch mousemove and keydown events that prevent Teams' idle detection from firing. The extension injects into no other site.
+Host permissions (teams.microsoft.com, teams.live.com, teams.cloud.microsoft): The activity-simulator content script runs only on these pages to dispatch mousemove and keydown events that prevent Teams' idle detection from firing. The extension injects into no other site.
 ```
 
 ---
@@ -70,7 +70,7 @@ Keep Active for Teams stops your Microsoft Teams web status from flipping to "Aw
 
 FEATURES
 • One-click On/Off toggle in the popup
-• Works on teams.microsoft.com and teams.live.com
+• Works on teams.microsoft.com, teams.live.com, and teams.cloud.microsoft
 • "ON" badge on the toolbar icon while active
 • Setting persists across browser restarts
 • Pauses immediately when toggled off — no reload needed
@@ -85,7 +85,7 @@ HOW TO USE
 PERMISSIONS, IN PLAIN ENGLISH
 • Storage — remembers your On/Off setting.
 • Tabs — lets the popup tell you whether a Teams tab is currently open.
-• Host access to teams.microsoft.com / teams.live.com — the activity simulator runs only on those pages, nowhere else.
+• Host access to teams.microsoft.com / teams.live.com / teams.cloud.microsoft — the activity simulator runs only on those pages, nowhere else.
 
 PRIVACY
 This extension does not collect personal information, does not transmit any data over the network, and does not use analytics or remote code. The only thing it stores is a single boolean (your On/Off toggle) in your browser's local extension storage. Full privacy policy: https://sudomofo.github.io/keep-active-for-teams/

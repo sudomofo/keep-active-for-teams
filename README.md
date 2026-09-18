@@ -15,7 +15,7 @@ A Chrome / Edge extension (Manifest V3) that keeps your Microsoft Teams web stat
 keep-active-for-teams/
 ├── manifest.json       # MV3 manifest
 ├── background.js       # Service worker — manages the ON badge
-├── content.js          # Runs on teams.microsoft.com / teams.live.com
+├── content.js          # Runs on teams.microsoft.com / teams.live.com / teams.cloud.microsoft
 ├── popup.html          # Toggle UI
 ├── popup.js            # Toggle logic, writes to chrome.storage
 ├── icons/              # 16 / 32 / 48 / 128 px PNG icons
@@ -64,7 +64,7 @@ No data leaves your browser. The extension stores a single boolean (your On/Off 
 
 - The Teams tab must stay open for the simulator to fire. The tab being backgrounded is fine — `setInterval` still runs in MV3 content scripts as long as the page is alive.
 - If you reload Teams, the content script re-reads the persisted state and resumes automatically.
-- Operates only on `teams.microsoft.com` and `teams.live.com`.
+- Operates only on `teams.microsoft.com`, `teams.live.com`, and `teams.cloud.microsoft`.
 
 ## Tip jar
 

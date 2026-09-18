@@ -12,11 +12,15 @@ function renderState(enabled) {
 async function checkTeamsTab() {
   try {
     const tabs = await chrome.tabs.query({
-      url: ["https://teams.microsoft.com/*", "https://teams.live.com/*"]
+      url: [
+        "https://teams.microsoft.com/*",
+        "https://teams.live.com/*",
+        "https://teams.cloud.microsoft/*"
+      ]
     });
     if (tabs.length === 0) {
       status.classList.add("warn");
-      status.textContent = "No Microsoft Teams tab is open — open teams.microsoft.com for this to take effect.";
+      status.textContent = "No Microsoft Teams tab is open — open Teams for this to take effect.";
     } else {
       status.classList.remove("warn");
       status.textContent = `Active on ${tabs.length} Teams tab${tabs.length === 1 ? "" : "s"}.`;
